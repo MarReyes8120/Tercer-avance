@@ -1,0 +1,403 @@
+body {
+    font-family: "IBM Plex Mono", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor general */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Sección de Inicio / Portada */
+.seccion-inicio {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+}
+
+.foto-perfil {
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 10px solid #90caf9;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-inicial h1 {
+    font-size: 80px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    line-height: 1.1;
+}
+
+.decoracion {
+    position: absolute;
+}
+
+.estrella-top {
+    width: 80px;
+    top: -50px;
+    right: -50px;
+}
+
+.estrella-bottom {
+    width: 120px;
+    bottom: -60px;
+    right: -80px;
+}
+
+/* Sección About Me */
+.seccion-about {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-about h2 {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 40px;
+}
+
+.contenido-about {
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border: 5px solid #90caf9;
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.avatar-about {
+    width: 200px;
+    height: auto;
+}
+
+.texto-about {
+    flex: 1;
+}
+
+.texto-about p {
+    font-size: 18px;
+    color: #64b5f6;
+    line-height: 1.8;
+}
+
+.icono-arduino {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    width: 120px;
+}
+
+.icono-circuito {
+    position: absolute;
+    bottom: -40px;
+    right: 50px;
+    width: 100px;
+}
+
+/* Sección Personal Skills */
+.seccion-skills {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-skills h2 {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.contenido-skills {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.avatar-skills {
+    width: 250px;
+    height: auto;
+}
+
+.lista-skills {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.7);
+    border: 3px solid #90caf9;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #64b5f6;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mini-estrella {
+    width: 30px;
+    height: 30px;
+}
+
+.estrella-grande {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+}
+
+/* Sección Education */
+.seccion-education {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-education h2 {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 40px;
+}
+
+.avatar-education {
+    width: 150px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.año {
+    background: #bbdefb;
+    border: 3px solid #90caf9;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #64b5f6;
+}
+
+.educacion-box {
+    background: rgba(187, 222, 251, 0.5);
+    border: 3px solid #90caf9;
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.educacion-box h3 {
+    font-size: 22px;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.educacion-box p {
+    font-size: 18px;
+    color: #64b5f6;
+    line-height: 1.5;
+}
+
+/* Sección Proyectos */
+.seccion-proyectos {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-proyectos .contenedor {
+    display: flex;
+    gap: 80px;
+}
+
+.columna-izquierda,
+.columna-derecha {
+    flex: 1;
+}
+
+.seccion-proyectos h2 {
+    font-size: 50px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.imagenes-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.proyecto-placeholder {
+    width: 100%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid #90caf9;
+    border-radius: 20px;
+}
+
+.texto-proyectos {
+    font-size: 50px;
+    font-style: italic;
+    color: #64b5f6;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.lista-lenguajes {
+    list-style: none;
+    font-size: 28px;
+    color: #64b5f6;
+    font-weight: 600;
+}
+
+.lista-lenguajes li {
+    padding: 10px 0;
+}
+
+.estrella-proyectos {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+}
+
+/* Sección Contact */
+.seccion-contact {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background-image: url('fondo.png');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.seccion-contact h2 {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 40px;
+}
+
+.info-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contacto-item {
+    background: rgba(187, 222, 251, 0.6);
+    border: 3px solid #90caf9;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.contacto-item h3 {
+    font-size: 24px;
+    font-style: italic;
+    color: #64b5f6;
+    margin-bottom: 15px;
+}
+
+.contacto-item p {
+    font-size: 18px;
+    color: #64b5f6;
+    line-height: 1.5;
+}
+
+.contacto-item a {
+    color: #64b5f6;
+    text-decoration: underline;
+}
+
+.avatar-contacto {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 250px;
+}
+
+.estrella-contacto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
