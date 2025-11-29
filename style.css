@@ -1,26 +1,39 @@
+/*ESTILOS GENERALES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "IBM Plex Mono", sans-serif;
     line-height: 1.6;
     color: #333;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* Contenedor general */
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 80px 20px;
 }
 
-/* Sección de Inicio / Portada */
-.seccion-inicio {
-    min-height: 100vh;
+/*ALTERNANCIA DE FONDOS*/
+.seccion-con-fondo {
     background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
+    background-image: url('assets/fondo.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+}
+
+.seccion-sin-fondo {
+    background: #ffffff;
+}
+
+/*SECCIÓN DE INICIO / PORTADA */
+.seccion-inicio {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,18 +50,23 @@ body {
 }
 
 .foto-perfil {
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 700px;
     border-radius: 30px;
     overflow: hidden;
     border: 10px solid #90caf9;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
 
 .foto-perfil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.info-inicial {
+    position: relative;
 }
 
 .info-inicial h1 {
@@ -64,38 +82,36 @@ body {
 }
 
 .estrella-top {
-    width: 80px;
-    top: -50px;
+    width: 150px;
+    top: -180px;
     right: -50px;
 }
 
 .estrella-bottom {
-    width: 120px;
-    bottom: -60px;
+    width: 300px;
+    bottom: -180px;
     right: -80px;
 }
 
-/* Sección About Me */
+/*SECCIÓN ABOUT ME */
 .seccion-about {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .seccion-about h2 {
-    font-size: 70px;
+    font-size: 100px;
     font-weight: 700;
     font-style: italic;
     color: #64b5f6;
-    margin-bottom: 40px;
+    margin-bottom: -40px;
+    margin-left: 500px;
 }
 
 .contenido-about {
     position: relative;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(187, 222, 251, 0.3);
     border: 5px solid #90caf9;
     border-radius: 40px;
     padding: 60px;
@@ -107,6 +123,11 @@ body {
 .avatar-about {
     width: 200px;
     height: auto;
+    flex-shrink: 0;
+    position: absolute;
+    left: -145px; 
+    bottom: -100px;
+    
 }
 
 .texto-about {
@@ -114,53 +135,60 @@ body {
 }
 
 .texto-about p {
-    font-size: 18px;
-    color: #64b5f6;
+    font-family: "Balsamiq Sans", sans-serif;
+    text-align: justify;
+    font-size: 25px;
+    color: #333;
     line-height: 1.8;
 }
 
 .icono-arduino {
     position: absolute;
     top: -60px;
-    right: 20px;
-    width: 120px;
+    right: -70px;
+    width: 200px;
 }
 
 .icono-circuito {
     position: absolute;
-    bottom: -40px;
-    right: 50px;
-    width: 100px;
+    bottom: -50px;
+    right: -70px;
+    width: 200px;
 }
 
-/* Sección Personal Skills */
+/*SECCIÓN PERSONAL SKILLS */
 .seccion-skills {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .seccion-skills h2 {
-    font-size: 70px;
-    font-weight: 700;
+    font-size: 93px;
+    font-weight: 900;
     font-style: italic;
     color: #64b5f6;
     margin-bottom: 40px;
     line-height: 1.1;
+    position: absolute;
+    top: 100;
+    left: 150px;
 }
 
 .contenido-skills {
     display: flex;
     align-items: center;
     gap: 60px;
+    position: relative;
 }
 
 .avatar-skills {
-    width: 250px;
+    width: 350px;
     height: auto;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: -70px;
+    left: -350px; 
 }
 
 .lista-skills {
@@ -168,10 +196,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 300px;
 }
 
 .skill-item {
-    background: rgba(255, 255, 255, 0.7);
+    font-family: "Balsamiq Sans", sans-serif;
+    background: rgba(255, 255, 255, 0.9);
     border: 3px solid #90caf9;
     border-radius: 50px;
     padding: 15px 30px;
@@ -182,6 +212,12 @@ body {
     gap: 15px;
 }
 
+.skill-item h3 {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0;
+}
+
 .mini-estrella {
     width: 30px;
     height: 30px;
@@ -189,34 +225,51 @@ body {
 
 .estrella-grande {
     position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 150px;
+    bottom: 450px;
+    right: -450px;
+    width: 250px;
 }
 
-/* Sección Education */
+/*SECCIÓN EDUCATION */
 .seccion-education {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
+.seccion-education .contenedor {
+    position: relative;
+}
+
 .seccion-education h2 {
-    font-size: 70px;
+    font-size: 110px;
     font-weight: 700;
     font-style: italic;
     color: #64b5f6;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    margin-left: 5cm;
 }
 
 .avatar-education {
-    width: 150px;
+    width: 200px;
     position: absolute;
-    top: 80px;
-    left: 100px;
+    top: 20px;
+    left: 0px;
+    top: 1cm;
+}
+.avatar-decorativo{
+    width: 500px;
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+    top: -2cm;
+}
+.avatar-decorativo1{
+    width: 500px;
+    position: absolute;
+    top: 150px;
+    right: 1000px;
+    top: -2cm;
 }
 
 .timeline {
@@ -235,26 +288,33 @@ body {
 }
 
 .año {
+    font-family: "Balsamiq Sans", sans-serif;
     background: #bbdefb;
     border: 3px solid #90caf9;
     border-radius: 30px;
     padding: 10px 30px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 600;
     color: #64b5f6;
 }
 
 .educacion-box {
-    background: rgba(187, 222, 251, 0.5);
+    font-family: "IBM Plex Mono", sans-serif;
+    background: rgba(187, 222, 251, 0.3);
     border: 3px solid #90caf9;
     border-radius: 30px;
     padding: 30px;
     text-align: center;
     width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .educacion-box h3 {
-    font-size: 22px;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 25px;
     font-style: italic;
     color: #64b5f6;
     margin-bottom: 15px;
@@ -262,16 +322,14 @@ body {
 }
 
 .educacion-box p {
-    font-size: 18px;
-    color: #64b5f6;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 20px;
+    color: #333;
     line-height: 1.5;
 }
 
-/* Sección Proyectos */
+/*SECCIÓN PROYECTOS*/
 .seccion-proyectos {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -287,6 +345,10 @@ body {
     flex: 1;
 }
 
+.columna-derecha {
+    position: relative;
+}
+
 .seccion-proyectos h2 {
     font-size: 50px;
     font-weight: 700;
@@ -297,18 +359,29 @@ body {
 }
 
 .imagenes-proyectos {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin: 30px 0;
 }
 
-.proyecto-placeholder {
+.proyecto-imagen {
     width: 100%;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.5);
+    height: 230px;
+    background: rgba(255, 255, 255, 0.7);
     border: 3px solid #90caf9;
     border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .texto-proyectos {
@@ -320,10 +393,11 @@ body {
 }
 
 .lista-lenguajes {
-    list-style: none;
-    font-size: 28px;
-    color: #64b5f6;
+    list-style-type: disc;
+    font-size: 30px;
+    color: #001733;
     font-weight: 600;
+    padding-left: 90px;
 }
 
 .lista-lenguajes li {
@@ -333,71 +407,233 @@ body {
 .estrella-proyectos {
     position: absolute;
     bottom: -50px;
-    right: -50px;
-    width: 150px;
+    right: -90px;
+    width: 250px;
 }
 
-/* Sección Contact */
+/* SECCIÓN CONTACT*/
 .seccion-contact {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-    background-image: url('fondo.png');
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
+    padding: 80px 0;
+}
+
+.seccion-contact .contenedor {
+    position: relative;
+    max-width: 1000px;
 }
 
 .seccion-contact h2 {
-    font-size: 70px;
+    font-size: 110px;
     font-weight: 700;
     font-style: italic;
     color: #64b5f6;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .info-contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .contacto-item {
     background: rgba(187, 222, 251, 0.6);
     border: 3px solid #90caf9;
     border-radius: 30px;
-    padding: 30px;
+    padding: 50px 55px;
+    min-height: 160px;
 }
 
 .contacto-item h3 {
-    font-size: 24px;
+    text-decoration: underline;
+    font-size: 30px;
     font-style: italic;
-    color: #64b5f6;
-    margin-bottom: 15px;
+    color: darkblue;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .contacto-item p {
-    font-size: 18px;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 28px;
     color: #64b5f6;
     line-height: 1.5;
 }
 
 .contacto-item a {
     color: #64b5f6;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
+/*
 .avatar-contacto {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    width: 250px;
+    bottom: -50px;
+    right: -400px;
+    width: 350px;
+    z-index: 2;
 }
+
 
 .estrella-contacto {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
+    top: -100px;
+    left: -550px;
+    width: 380px;
+    opacity: 0.7;
+}
+*/
+
+.avatar-decorativo2 {
+    position: absolute;
+    top: -100px;
+    left: 1050px;
+    width: 600px;
+}
+
+.avatar-decorativo3 {
+    position: absolute;
+    top: 480px;
+    right: 1050px;
+    width: 650px;
+}
+
+/*RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+    .contenedor-inicio {
+        gap: 60px;
+    }
+    
+    .foto-perfil {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .info-inicial h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contenedor-inicio {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .seccion-proyectos .contenedor {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .timeline {
+        flex-direction: column;
+    }
+    
+    .contenido-skills {
+        flex-direction: column;
+    }
+    
+    .avatar-education {
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .avatar-contacto {
+        position: static;
+        display: block;
+        margin: 30px auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 60px 20px;
+    }
+    
+    .foto-perfil {
+        width: 300px;
+        height: 380px;
+    }
+    
+    .info-inicial h1 {
+        font-size: 50px;
+    }
+    
+    .seccion-about h2,
+    .seccion-skills h2,
+    .seccion-education h2,
+    .seccion-contact h2 {
+        font-size: 50px;
+    }
+    
+    .seccion-proyectos h2 {
+        font-size: 36px;
+    }
+    
+    .contenido-about {
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+    
+    .info-contacto {
+        grid-template-columns: 1fr;
+    }
+    
+    .imagenes-proyectos {
+        grid-template-columns: 1fr;
+    }
+    
+    .lista-lenguajes {
+        font-size: 22px;
+    }
+    
+    .icono-arduino,
+    .icono-circuito,
+    .estrella-grande,
+    .estrella-proyectos,
+    .estrella-contacto {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-inicial h1 {
+        font-size: 36px;
+    }
+    
+    .foto-perfil {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .seccion-about h2,
+    .seccion-skills h2,
+    .seccion-education h2,
+    .seccion-contact h2 {
+        font-size: 36px;
+    }
+    
+    .contenido-about {
+        padding: 30px 20px;
+    }
+    
+    .texto-about p {
+        font-size: 16px;
+    }
+    
+    .skill-item {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+    
+    .skill-item h3 {
+        font-size: 16px;
+    }
 }
 
